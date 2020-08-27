@@ -4,9 +4,7 @@
     font-family: 'Lato', sans-serif, 'Poppins', sans-serif;
 }
 
-body {
-    background-color: rgb(167, 199, 117);
-}
+body {}
 
 .fullscreenImage {
     background-image: url(../img/garden.jpg);
@@ -49,10 +47,31 @@ ul li a:hover {
     transition: 0.7s ease;
 }
 
-
-/*.content {
+.register {
     position: relative;
+    left: 45vw;
+}
+
+.content {
+    position: relative;
+    display: flex;
+    opacity: 0.5;
+    position: absolute;
     top: 100vh;
     height: 1500px;
-    width: 100vw;
-}*/
+    width: 99.1vw;
+}
+
+.textarea {
+    flex-direction: row;
+    position: relative;
+    top: 5em;
+    background-color: lightslategray;
+    color: white;
+    font-size: 22px;
+    padding: 6px 25px;
+    border: 2px solid white;
+    border-radius: 5px;
+    height: 20vh;
+    width: 20vh;
+}
