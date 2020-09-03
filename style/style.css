@@ -53,16 +53,33 @@ ul li a:hover {
     left: 45vw;
 }
 
+.form-box {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    left: calc(50vw - 250px);
+    top: 25%;
+    display: flex;
+    width: 500px;
+    height: 500px;
+    background-color: rgba(0, 0, 0, 45%)
+}
+
 .login {
     display: flex;
     flex-direction: column;
     /*align-items: center;*/
     width: 400px;
+    height: 400px;
     position: absolute;
-    top: 40%;
-    left: calc(50vw - 200px);
+    top: 12%;
+    right: 3.5%;
+    /* 40%  */
+    /* calc(50vw - 200px)  */
     color: white;
-    /*border: 2px solid white*/
+    /*border: 2px solid white;*/
 }
 
 .login h1 {
