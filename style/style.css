@@ -19,6 +19,7 @@ body {}
 }
 
 ul {
+    display: flex;
     position: absolute;
     top: 2em;
     float: left;
@@ -35,7 +36,7 @@ ul li {
 ul li a {
     text-decoration: none;
     color: white;
-    font-size: 22px;
+    font-size: 24px;
     padding: 6px 25px;
     border: 2px solid white;
     border-radius: 5px;
@@ -52,26 +53,63 @@ ul li a:hover {
     left: 45vw;
 }
 
-.content {
-    position: relative;
+.login {
     display: flex;
-    opacity: 0.5;
+    flex-direction: column;
+    /*align-items: center;*/
+    width: 400px;
     position: absolute;
-    top: 100vh;
-    height: 1500px;
-    width: 99.1vw;
+    top: 40%;
+    left: calc(50vw - 200px);
+    color: white;
+    /*border: 2px solid white*/
 }
 
-.textarea {
-    flex-direction: row;
-    position: relative;
-    top: 5em;
-    background-color: lightslategray;
-    color: white;
-    font-size: 22px;
-    padding: 6px 25px;
+.login h1 {
+    font-size: 36px;
+    margin-bottom: 0.66em;
+}
+
+.textbox {
     border: 2px solid white;
+    background-color: rgba(133, 133, 133, 0.5);
+    overflow: hidden;
+    width: 300px;
+    height: 1em;
+    font-size: 24px;
+    color: white;
+    margin-bottom: 1em;
+    padding: 1px;
     border-radius: 5px;
-    height: 20vh;
-    width: 20vh;
+}
+
+.textbox::placeholder {
+    color: rgb(214, 214, 214);
+}
+
+.submit {
+    font-size: 24px;
+    width: 100px;
+    margin-bottom: 0.75em;
+    border-radius: 5px;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.submit:hover {
+    background-color: white;
+    color: black;
+    transition: .7s ease;
+}
+
+.login a {
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+}
+
+.login a:hover {
+    font-weight: 700;
+    transition: .7s ease;
 }
