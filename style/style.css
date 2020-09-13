@@ -4,8 +4,6 @@
     font-family: 'Lato', sans-serif, 'Poppins', sans-serif;
 }
 
-body {}
-
 .fullscreenImage {
     background-image: url(../img/garden.jpg);
     position: fixed;
@@ -25,11 +23,10 @@ ul {
     float: left;
     list-style-type: none;
     margin-top: 25px;
-    margin-left: 40px;
+    width: 100vw;
 }
 
 ul li {
-    display: inline-block;
     margin-right: 10px;
 }
 
@@ -37,7 +34,7 @@ ul li a {
     text-decoration: none;
     color: white;
     font-size: 24px;
-    padding: 6px 25px;
+    padding: 0.3vh 1.5vw;
     border: 2px solid white;
     border-radius: 5px;
 }
@@ -48,9 +45,14 @@ ul li a:hover {
     transition: 0.7s ease;
 }
 
-.register {
+ul li:first-child {
+    margin-left: 5vw;
+}
+
+ul li:last-child {
     position: relative;
-    left: 45vw;
+    margin-left: auto;
+    margin-right: 15vw;
 }
 
 .form-box {
@@ -104,7 +106,7 @@ ul li a:hover {
     color: rgb(214, 214, 214);
 }
 
-.submit {
+#submit {
     font-size: 24px;
     width: 100px;
     margin-bottom: 0.75em;
