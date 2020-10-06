@@ -10,6 +10,7 @@
 </head>
 
 <body>
+
     <div class="fullscreenImage"></div>
     <div class="navBar">
         <ul>
@@ -18,7 +19,7 @@
             <li><a href="#">Gallery</a></li>
             <li><a href="#">How Tos</a></li>
             <li><a href="#">Contact us</a></li>
-            <li><a class="register" href="login.html">Login</a></li>
+            <li><a id="acc" href="login.html">Login</a></li>
         </ul>
     </div>
 
@@ -27,22 +28,33 @@
 
             <h1>Create a new account</h1>
 
-            <input class="textbox" type="text" id="email" placeholder="Email">
+            <div id="emailField"><input class="textbox" type="text" id="email" placeholder="Email">
+                <p class="error"></p>
+            </div>
 
-            <input class="textbox" type="password" id='password' placeholder="Password">
+            <div id="passwordField"><input class="textbox" type="password" id='password' placeholder="Password">
+                <p id="passwordErr"></p>
+            </div>
 
-            <input class="textbox" type="password" id="repeatPassword" placeholder="Repeat password">
+            <div id="rePassFeild"><input class="textbox" type="password" id="repeatPassword" placeholder="Repeat password">
+                <p id="repeatPasswordErr"></p>
+            </div>
 
-            <input class="textbox" type="text" id="name" placeholder="Full name">
+            <div id="nameField"><input class="textbox" type="text" id="name" placeholder="Full name">
+                <p id="nameErr"></p>
+            </div>
 
-            <input class="textbox" type="text" id="address" placeholder="Address">
+            <div id="addressField"><input class="textbox" type="text" id="address" placeholder="Address">
+                <p id="addressErr"></p>
+            </div>
 
             <div>
-                <button id="submit" type="submit">Submit</button>
+                <button class="button" id="registerBtn" type="submit">Submit</button>
             </div>
 
         </form>
     </div>
+    <script src="main.js"></script>
     <script src="register.js"></script>
 </body>
 

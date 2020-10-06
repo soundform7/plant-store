@@ -10,15 +10,16 @@
 </head>
 
 <body>
+
     <div class="fullscreenImage"></div>
     <div class="navBar">
         <ul>
-            <li><a href="index.html">Home</a></li>
+            <li><a onload="userChecker()" href="index.html">Home</a></li>
             <li><a href="#">Products</a></li>
             <li><a href="#">Gallery</a></li>
             <li><a href="#">How Tos</a></li>
             <li><a href="#">Contact us</a></li>
-            <li><a class="register" href="#">Login</a></li>
+            <li><a id="acc" href="#">Login</a></li>
         </ul>
     </div>
 
@@ -31,19 +32,24 @@
 
             <h1>Login</h1>
 
-            <input class="textbox" type="email" id="email" placeholder="Email">
+            <div><input class="textbox" type="email" id="email" placeholder="Email">
+                <p id="emailErr"></p>
+            </div>
 
-            <input class="textbox" type="password" id="password" placeholder="Password">
+            <div><input class="textbox" type="password" id="password" placeholder="Password">
+                <p id="passwordErr"></p>
+            </div>
 
             <div>
-                <button class="submit" type="submit">login</button>
+                <button class="button" id="loginBtn" type="submit">login</button>
             </div>
 
             <a href="register.html">Create a new account</a>
 
         </form>
     </div>
-
+    <script src="main.js"></script>
+    <script src="login.js"></script>
 </body>
 
 </html>

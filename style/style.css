@@ -55,6 +55,17 @@ ul li:last-child {
     margin-right: 15vw;
 }
 
+#logout {
+    padding: 0.3vh 1.5vw;
+    font-size: 24px;
+    width: 305px;
+    margin-bottom: 0.75em;
+    border-radius: 5px;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
 .form-box {
     position: absolute;
     display: flex;
@@ -74,7 +85,7 @@ ul li:last-child {
     flex-direction: column;
     /*align-items: center;*/
     width: 400px;
-    height: 400px;
+    height: 450px;
     position: absolute;
     top: 12%;
     right: 3.5%;
@@ -97,18 +108,24 @@ ul li:last-child {
     height: 1em;
     font-size: 24px;
     color: white;
-    margin-bottom: 1em;
+    /*margin-bottom: 1em;*/
     padding: 1px;
     border-radius: 5px;
+}
+
+.form-box p {
+    color: red;
+    margin-left: 6em;
+    margin-bottom: 1em;
 }
 
 .textbox::placeholder {
     color: rgb(214, 214, 214);
 }
 
-#submit {
+.button {
     font-size: 24px;
-    width: 100px;
+    width: 305px;
     margin-bottom: 0.75em;
     border-radius: 5px;
     background-color: transparent;
@@ -116,10 +133,11 @@ ul li:last-child {
     border: 2px solid white;
 }
 
-.submit:hover {
+.button:hover {
     background-color: white;
     color: black;
     transition: .7s ease;
+    cursor: pointer;
 }
 
 .login a {
