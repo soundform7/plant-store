@@ -1,4 +1,8 @@
 function isEmailValid(email) {
+    if (email.length < 1) {
+        errorNotifier('email', 'Please enter your email')
+        return false;
+    }
     for (let i = 0; i < users.length; i++) {
         if (users[i].email.toLowerCase() === email.toLowerCase()) {
             errorNotifier('email', 'Email is already in use');
@@ -15,7 +19,10 @@ function isEmailValid(email) {
 }
 
 function isPasswordValid(password, repeatPassword) {
-    if (password.length < 6) {
+    if (password.length < 1) {
+        errorNotifier('password', 'Pleae enter your password');
+        return false;
+    } else if (password.length < 6) {
         errorNotifier('password', 'Password too short')
         return false;
     }
@@ -27,11 +34,11 @@ function isPasswordValid(password, repeatPassword) {
 }
 
 function submitInfo() {
-    let email = document.getElementById('email').value;
-    let password = document.getElementById('password').value;
-    let repeatPassword = document.getElementById('repeatPassword').value;
-    let name = document.getElementById('name').value;
-    let address = document.getElementById('address').value;
+    let email = document.getElementById('email').value.trim();
+    let password = document.getElementById('password').value.trim();
+    let repeatPassword = document.getElementById('repeatPassword').value.trim();
+    let name = document.getElementById('name').value.trim();
+    let address = document.getElementById('address').value.trim();
 
     if (isEmailValid(email) && isPasswordValid(password, repeatPassword)) {
         user = new User(email, password, name, address);

@@ -34,7 +34,10 @@ function errorNotifier(field, message) {
     parent.querySelector('p').textContent = message;
     document.getElementById(field).style.borderColor = 'red';
     document.getElementById(field).value = '';
-    // the message should last for 5 seconds
+    setTimeout(() => {
+        parent.querySelector('p').textContent = '';
+        document.getElementById(field).style.borderColor = 'white';
+    }, 5000);
 }
 
 function userChecker() {
