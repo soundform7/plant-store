@@ -18,12 +18,12 @@
 
 ul {
     display: flex;
-    position: absolute;
+    position: relative;
     top: 2em;
     float: left;
     list-style-type: none;
     margin-top: 25px;
-    width: 100vw;
+    width: 100%;
 }
 
 ul li {
@@ -31,6 +31,8 @@ ul li {
 }
 
 ul li a {
+    white-space: nowrap;
+    position: relative;
     text-decoration: none;
     color: white;
     font-size: 24px;
@@ -50,9 +52,8 @@ ul li:first-child {
 }
 
 ul li:last-child {
-    position: relative;
     margin-left: auto;
-    margin-right: 15vw;
+    margin-right: 15%;
 }
 
 #logout {
