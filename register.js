@@ -45,7 +45,9 @@ function submitInfo() {
         console.log(user);
         users.push(user);
         localStorage.setItem('users', JSON.stringify(users));
+        setLoggedUser(user);
         console.log('registered');
+        window.location.href = 'index.html'
     } else {
         console.log('not registered');
     }

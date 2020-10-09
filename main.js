@@ -55,9 +55,18 @@ function userChecker() {
 
 function logout() {
     setLoggedUser(0);
+    location.href = 'index.html';
 }
 
 userChecker();
+
+document.getElementById('acc').addEventListener('mouseover', (e) => {
+    document.getElementById('userDropdown').classList.add('show');
+});
+
+document.getElementById('userDropdownArea').addEventListener('mouseleave', (e) => {
+    document.getElementById('userDropdown').classList.remove('show');
+});
 
 /*users = [];
 localStorage.setItem('users', JSON.stringify(users));*/
