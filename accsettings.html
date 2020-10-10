@@ -13,6 +13,8 @@
 <body>
 
     <div class="fullscreenImage"></div>
+
+
     <div class="navBar">
         <ul>
             <li><a href="index.html">Home</a></li>
@@ -23,13 +25,39 @@
             <li class="dropdown" id="userDropdownArea">
                 <a class="droplink" id="acc" href="login.html">Login</a>
                 <div id="userDropdown" class="dropdown-content">
-                    <a href='accsettings.html'>Account settings</a>
+                    <a href='#'>Account settings</a>
                     <a href='#'>Shopping cart</a>
                     <a id="logout" href='index.html'>Logout</a>
                 </div>
             </li>
         </ul>
     </div>
+
+    <div class="page-content">
+        <div class="content-box" id="user-panel">
+            <h1>User info</h1>
+            <div>
+                <p>email</p>
+                <button>change</button>
+            </div>
+            <div>
+                <p>password</p>
+                <button>change</button>
+            </div>
+            <div>
+                <p>name</p>
+                <button>change</button>
+            </div>
+            <div>
+                <p>address</p>
+                <button>change</button>
+            </div>
+        </div>
+        <div id="order-history">
+            <p></p>
+        </div>
+    </div>
+
     <script src="main.js"></script>
 </body>
 

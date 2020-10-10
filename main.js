@@ -45,28 +45,29 @@ function userChecker() {
     if (typeof loggedUser === 'object') {
         document.getElementById('acc').innerHTML = loggedUser.email;
         console.log('user logged in');
-        // drop down menu (profile settings, shopping cart, logout)
-        // redirects from registration and loggin page to user control panel
+        return true;
     } else {
         console.log('user not logged in');
+        return false;
     }
 
 }
 
-function logout() {
-    setLoggedUser(0);
-    location.href = 'index.html';
+if (userChecker()) {
+    document.getElementById('acc').href = '#'
+
+    document.getElementById('acc').addEventListener('mouseover', (e) => {
+        document.getElementById('userDropdown').classList.add('show');
+    });
+
+    document.getElementById('userDropdownArea').addEventListener('mouseleave', (e) => {
+        document.getElementById('userDropdown').classList.remove('show');
+    });
+
+    document.getElementById('logout').addEventListener('click', (e) => {
+        setLoggedUser(0);
+    })
 }
-
-userChecker();
-
-document.getElementById('acc').addEventListener('mouseover', (e) => {
-    document.getElementById('userDropdown').classList.add('show');
-});
-
-document.getElementById('userDropdownArea').addEventListener('mouseleave', (e) => {
-    document.getElementById('userDropdown').classList.remove('show');
-});
 
 /*users = [];
 localStorage.setItem('users', JSON.stringify(users));*/

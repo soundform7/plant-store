@@ -1,3 +1,7 @@
+if (userChecker()) {
+    window.location.replace('index.html');
+}
+
 function isEmailValid(email) {
     if (email.length < 1) {
         errorNotifier('email', 'Please enter your email')
